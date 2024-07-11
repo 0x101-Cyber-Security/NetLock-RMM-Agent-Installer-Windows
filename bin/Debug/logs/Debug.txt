@@ -1,0 +1,24 @@
+{"type":"Debug","date":"08.07.2024 16:57:36","reported_by":"Main","_event":"OS_Version","content":"OS (6) is old. Switch to compatibility mode."}
+{"type":"Debug","date":"08.07.2024 16:57:36","reported_by":"Main","_event":"Server_Config_Handler.Load (server_config_json)","content":"{\r\n  \"ssl\": false,\r\n  \"main_communication_server\": \"localhost:7173\",\r\n  \"fallback_communication_server\": \"localhost:7173\",\r\n  \"main_update_server\": \"localhost:7173\",\r\n  \"fallback_update_server\": \"localhost:7173\",\r\n  \"main_trust_server\": \"localhost:7173\",\r\n  \"fallback_trust_server\": \"localhost:7173\",\r\n  \"tenant_name\": \"0x101 Cyber Security\",\r\n  \"location_name\": \"K\\u00F6ln1\",\r\n  \"language\": \"en-US\",\r\n  \"guid\": \"8d194d50-9171-49fb-8979-917b99a9654d\"\r\n}"}
+{"type":"Debug","date":"08.07.2024 16:57:36","reported_by":"Main","_event":"main_communication_server","content":"localhost:7173"}
+{"type":"Debug","date":"08.07.2024 16:57:36","reported_by":"Main","_event":"fallback_communication_server","content":"localhost:7173"}
+{"type":"Debug","date":"08.07.2024 16:57:36","reported_by":"Main","_event":"main_update_server","content":"localhost:7173"}
+{"type":"Debug","date":"08.07.2024 16:57:36","reported_by":"Main","_event":"fallback_update_server","content":"localhost:7173"}
+{"type":"Debug","date":"08.07.2024 16:57:36","reported_by":"Main","_event":"main_trust_server","content":"localhost:7173"}
+{"type":"Debug","date":"08.07.2024 16:57:36","reported_by":"Main","_event":"fallback_trust_server","content":"localhost:7173"}
+{"type":"Debug","date":"08.07.2024 16:57:36","reported_by":"Main","_event":"guid","content":"8d194d50-9171-49fb-8979-917b99a9654d"}
+{"type":"Debug","date":"08.07.2024 16:57:36","reported_by":"Main","_event":"Delete old agent.package","content":"Done."}
+{"type":"Debug","date":"08.07.2024 16:57:36","reported_by":"Main","_event":"Delete old remote.package","content":"Done."}
+{"type":"Debug","date":"08.07.2024 16:57:36","reported_by":"Main","_event":"Delete old health.package","content":"Not present."}
+{"type":"Debug","date":"08.07.2024 16:58:36","reported_by":"Main","_event":"OS_Version","content":"OS (6) is old. Switch to compatibility mode."}
+{"type":"Debug","date":"08.07.2024 16:58:38","reported_by":"Main","_event":"Server_Config_Handler.Load (server_config_json)","content":"{\r\n  \"ssl\": false,\r\n  \"main_communication_server\": \"localhost:7173\",\r\n  \"fallback_communication_server\": \"localhost:7173\",\r\n  \"main_update_server\": \"localhost:7173\",\r\n  \"fallback_update_server\": \"localhost:7173\",\r\n  \"main_trust_server\": \"localhost:7173\",\r\n  \"fallback_trust_server\": \"localhost:7173\",\r\n  \"tenant_name\": \"0x101 Cyber Security\",\r\n  \"location_name\": \"K\\u00F6ln1\",\r\n  \"language\": \"en-US\",\r\n  \"guid\": \"8d194d50-9171-49fb-8979-917b99a9654d\"\r\n}"}
+{"type":"Debug","date":"08.07.2024 16:58:38","reported_by":"Main","_event":"main_communication_server","content":"localhost:7173"}
+{"type":"Debug","date":"08.07.2024 16:58:38","reported_by":"Main","_event":"fallback_communication_server","content":"localhost:7173"}
+{"type":"Debug","date":"08.07.2024 16:58:38","reported_by":"Main","_event":"main_update_server","content":"localhost:7173"}
+{"type":"Debug","date":"08.07.2024 16:58:38","reported_by":"Main","_event":"fallback_update_server","content":"localhost:7173"}
+{"type":"Debug","date":"08.07.2024 16:58:38","reported_by":"Main","_event":"main_trust_server","content":"localhost:7173"}
+{"type":"Debug","date":"08.07.2024 16:58:38","reported_by":"Main","_event":"fallback_trust_server","content":"localhost:7173"}
+{"type":"Debug","date":"08.07.2024 16:58:38","reported_by":"Main","_event":"guid","content":"8d194d50-9171-49fb-8979-917b99a9654d"}
+{"type":"Debug","date":"08.07.2024 16:58:38","reported_by":"Main","_event":"Delete old agent.package","content":"Done."}
+{"type":"Debug","date":"08.07.2024 16:58:38","reported_by":"Main","_event":"Delete old remote.package","content":"Done."}
+{"type":"Debug","date":"08.07.2024 16:58:38","reported_by":"Main","_event":"Delete old health.package","content":"Not present."}

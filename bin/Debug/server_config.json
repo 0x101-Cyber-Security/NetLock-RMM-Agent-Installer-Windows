@@ -1,0 +1,15 @@
+{
+  "guid": "8d194d50-9171-49fb-8979-917b99a9654d",
+  "ssl": false,
+  "main_communication_server": "localhost:7173",
+  "fallback_communication_server": "localhost:7173",
+  "main_update_server": "localhost:7173",
+  "fallback_update_server": "localhost:7173",
+  "main_trust_server": "localhost:7173",
+  "fallback_trust_server": "localhost:7173",
+  "tenant_name": "0x101 Cyber Security",
+  "location_name": "K\u00F6ln1",
+  "language": "en-US",
+  "access_key": "",
+  "authorized": "0"
+}
