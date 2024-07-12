@@ -16,7 +16,7 @@ namespace NetLock_RMM_Agent_Installer_Windows.Helper
             {
                 using (HttpClient client = new HttpClient())
                 {
-                    client.DefaultRequestHeaders.Add("guid", guid);
+                    client.DefaultRequestHeaders.Add("Package_Guid", guid);
 
                     HttpResponseMessage response = null;
 
@@ -50,7 +50,7 @@ namespace NetLock_RMM_Agent_Installer_Windows.Helper
             {
                 using (HttpClient client = new HttpClient())
                 {
-                    client.DefaultRequestHeaders.Add("guid", guid);
+                    client.DefaultRequestHeaders.Add("Package_Guid", guid);
 
                     HttpResponseMessage response = null;
 

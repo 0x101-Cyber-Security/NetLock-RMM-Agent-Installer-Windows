@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\NicoMak\\OneDrive - 0x101 Cyber Security\\NetLock Root\\NetLock-RMM-Agent-Installer-Windows\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4F9D9FE1-857A-4B42-A79D-CB78C1F0F815}|NetLock RMM Agent Installer Windows.csproj|c:\\users\\nicomak\\onedrive - 0x101 cyber security\\netlock root\\netlock-rmm-agent-installer-windows\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4F9D9FE1-857A-4B42-A79D-CB78C1F0F815}|NetLock RMM Agent Installer Windows.csproj|C:\\Users\\NicoMak\\OneDrive - 0x101 Cyber Security\\NetLock Root\\NetLock-RMM-Agent-Installer-Windows\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4F9D9FE1-857A-4B42-A79D-CB78C1F0F815}|NetLock RMM Agent Installer Windows.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4F9D9FE1-857A-4B42-A79D-CB78C1F0F815}|NetLock RMM Agent Installer Windows.csproj|c:\\users\\nicomak\\onedrive - 0x101 cyber security\\netlock root\\netlock-rmm-agent-installer-windows\\helper\\check_connection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4F9D9FE1-857A-4B42-A79D-CB78C1F0F815}|NetLock RMM Agent Installer Windows.csproj|solutionrelative:helper\\check_connection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4F9D9FE1-857A-4B42-A79D-CB78C1F0F815}|NetLock RMM Agent Installer Windows.csproj|c:\\users\\nicomak\\onedrive - 0x101 cyber security\\netlock root\\netlock-rmm-agent-installer-windows\\helper\\http.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F9D9FE1-857A-4B42-A79D-CB78C1F0F815}|NetLock RMM Agent Installer Windows.csproj|solutionrelative:helper\\http.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4F9D9FE1-857A-4B42-A79D-CB78C1F0F815}|NetLock RMM Agent Installer Windows.csproj|C:\\Users\\NicoMak\\OneDrive - 0x101 Cyber Security\\NetLock Root\\NetLock-RMM-Agent-Installer-Windows\\helper\\http.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4F9D9FE1-857A-4B42-A79D-CB78C1F0F815}|NetLock RMM Agent Installer Windows.csproj|solutionrelative:helper\\http.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4F9D9FE1-857A-4B42-A79D-CB78C1F0F815}|NetLock RMM Agent Installer Windows.csproj|C:\\Users\\NicoMak\\OneDrive - 0x101 Cyber Security\\NetLock Root\\NetLock-RMM-Agent-Installer-Windows\\helper\\check_connection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F9D9FE1-857A-4B42-A79D-CB78C1F0F815}|NetLock RMM Agent Installer Windows.csproj|solutionrelative:helper\\check_connection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4F9D9FE1-857A-4B42-A79D-CB78C1F0F815}|NetLock RMM Agent Installer Windows.csproj|C:\\Users\\NicoMak\\OneDrive - 0x101 Cyber Security\\NetLock Root\\NetLock-RMM-Agent-Installer-Windows\\application_paths.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -58,7 +58,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Check_Connection.cs",
               "DocumentMoniker": "C:\\Users\\NicoMak\\OneDrive - 0x101 Cyber Security\\NetLock Root\\NetLock-RMM-Agent-Installer-Windows\\Helper\\Check_Connection.cs",
               "RelativeDocumentMoniker": "Helper\\Check_Connection.cs",
@@ -66,8 +66,7 @@
               "RelativeToolTip": "Helper\\Check_Connection.cs",
               "ViewState": "AQIAADUAAAAAAAAAAAAWwFEAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-10T23:49:14.613Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-10T23:49:14.613Z"
             },
             {
               "$type": "Document",
@@ -79,8 +78,7 @@
               "RelativeToolTip": "Helper\\Process.cs",
               "ViewState": "AQIAAAEAAAAAAAAAAAAAACUAAAA8AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-08T21:26:31.704Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-08T21:26:31.704Z"
             },
             {
               "$type": "Document",
@@ -92,8 +90,7 @@
               "RelativeToolTip": "Helper\\Service.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAqwAsAAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-08T21:25:55.935Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-08T21:25:55.935Z"
             },
             {
               "$type": "Document",
@@ -105,8 +102,7 @@
               "RelativeToolTip": "packages.config",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2024-07-08T20:18:21.384Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-08T20:18:21.384Z"
             },
             {
               "$type": "Document",
@@ -118,8 +114,7 @@
               "RelativeToolTip": "App.config",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2024-07-08T19:49:30.204Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-08T19:49:30.204Z"
             },
             {
               "$type": "Document",
@@ -131,18 +126,17 @@
               "RelativeToolTip": "Helper\\IO.cs",
               "ViewState": "AQIAABoAAAAAAAAAAAAtwD4AAABXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-08T15:07:06.209Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-08T15:07:06.209Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Http.cs",
               "DocumentMoniker": "C:\\Users\\NicoMak\\OneDrive - 0x101 Cyber Security\\NetLock Root\\NetLock-RMM-Agent-Installer-Windows\\Helper\\Http.cs",
               "RelativeDocumentMoniker": "Helper\\Http.cs",
               "ToolTip": "C:\\Users\\NicoMak\\OneDrive - 0x101 Cyber Security\\NetLock Root\\NetLock-RMM-Agent-Installer-Windows\\Helper\\Http.cs",
               "RelativeToolTip": "Helper\\Http.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAtAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-08T13:54:13.254Z",
               "EditorCaption": ""
@@ -157,8 +151,7 @@
               "RelativeToolTip": "Application_Paths.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAACAAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-08T13:02:16.49Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-08T13:02:16.49Z"
             },
             {
               "$type": "Document",
@@ -170,8 +163,7 @@
               "RelativeToolTip": "Helper\\Logging.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-08T13:01:54.382Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-08T13:01:54.382Z"
             },
             {
               "$type": "Document",
@@ -181,7 +173,7 @@
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\NicoMak\\OneDrive - 0x101 Cyber Security\\NetLock Root\\NetLock-RMM-Agent-Installer-Windows\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAIEAAAAAAAAAAAAWwKkAAAARAAAA",
+              "ViewState": "AQIAAOABAAAAAAAAAAAnwAYCAABHAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-08T12:54:52.814Z",
               "EditorCaption": ""

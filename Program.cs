@@ -18,7 +18,7 @@ namespace NetLock_RMM_Agent_Installer_Windows
     public class Server_Config
     {
         public bool ssl { get; set; } = false;
-        public string guid { get; set; } = String.Empty;
+        public string package_guid { get; set; } = String.Empty;
         public string main_communication_server { get; set; } = String.Empty;
         public string fallback_communication_server { get; set; } = String.Empty;
         public string main_update_server { get; set; } = String.Empty;
@@ -240,47 +240,47 @@ namespace NetLock_RMM_Agent_Installer_Windows
                 bool http_status = true;
 
                 // Download comm agent package
-                http_status = await Helper.Http.DownloadFileAsync(server_config_new.ssl, update_server + Application_Paths.comm_agent_package_url, Application_Paths.c_temp_netlock_dir + Application_Paths.comm_agent_package_path, server_config_new.guid);
+                http_status = await Helper.Http.DownloadFileAsync(server_config_new.ssl, update_server + Application_Paths.comm_agent_package_url, Application_Paths.c_temp_netlock_dir + Application_Paths.comm_agent_package_path, server_config_new.package_guid);
 
                 Logging.Handler.Debug("Main", "Download comm agent package", http_status.ToString());
                 Logging.Handler.Debug("Main", "Download comm agent package", "Done.");
                 Console.WriteLine("[" + DateTime.Now + "] - [Main] -> Download comm agent package: Done.");
 
                 // Download remote agent package
-                http_status = await Helper.Http.DownloadFileAsync(server_config_new.ssl, update_server + Application_Paths.remote_agent_package_url, Application_Paths.c_temp_netlock_dir + Application_Paths.remote_agent_package_path, server_config_new.guid);
+                http_status = await Helper.Http.DownloadFileAsync(server_config_new.ssl, update_server + Application_Paths.remote_agent_package_url, Application_Paths.c_temp_netlock_dir + Application_Paths.remote_agent_package_path, server_config_new.package_guid);
                 Logging.Handler.Debug("Main", "Download remote agent package", http_status.ToString());
                 Logging.Handler.Debug("Main", "Download remote agent package", "Done.");
                 Console.WriteLine("[" + DateTime.Now + "] - [Main] -> Download remote agent package: Done.");
 
                 // Download health agent package
-                http_status = await Helper.Http.DownloadFileAsync(server_config_new.ssl, update_server + Application_Paths.health_agent_package_url, Application_Paths.c_temp_netlock_dir + Application_Paths.health_agent_package_path, server_config_new.guid);
+                http_status = await Helper.Http.DownloadFileAsync(server_config_new.ssl, update_server + Application_Paths.health_agent_package_url, Application_Paths.c_temp_netlock_dir + Application_Paths.health_agent_package_path, server_config_new.package_guid);
                 Logging.Handler.Debug("Main", "Download health agent package", http_status.ToString());
                 Logging.Handler.Debug("Main", "Download health agent package", "Done.");
                 Console.WriteLine("[" + DateTime.Now + "] - [Main] -> Download health agent package: Done.");
 
                 // Download uninstaller
-                http_status = await Helper.Http.DownloadFileAsync(server_config_new.ssl, update_server + Application_Paths.uninstaller_package_url, Application_Paths.c_temp_netlock_dir + Application_Paths.uninstaller_package_path, server_config_new.guid);
+                http_status = await Helper.Http.DownloadFileAsync(server_config_new.ssl, update_server + Application_Paths.uninstaller_package_url, Application_Paths.c_temp_netlock_dir + Application_Paths.uninstaller_package_path, server_config_new.package_guid);
                 Logging.Handler.Debug("Main", "Download uninstaller", http_status.ToString());
                 Logging.Handler.Debug("Main", "Download uninstaller", "Done.");
                 Console.WriteLine("[" + DateTime.Now + "] - [Main] -> Download uninstaller: Done.");
 
                 // Get hash comm agent package
-                string comm_agent_package_hash = await Helper.Http.GetHashAsync(server_config_new.ssl, trust_server + Application_Paths.comm_agent_package_url + ".sha512", server_config_new.guid);
+                string comm_agent_package_hash = await Helper.Http.GetHashAsync(server_config_new.ssl, trust_server + Application_Paths.comm_agent_package_url + ".sha512", server_config_new.package_guid);
                 Logging.Handler.Debug("Main", "Get hash comm agent package", comm_agent_package_hash);
                 Console.WriteLine("[" + DateTime.Now + "] - [Main] -> Get hash comm agent package: " + comm_agent_package_hash);
 
                 // Get hash remote agent package
-                string remote_agent_package_hash = await Helper.Http.GetHashAsync(server_config_new.ssl, trust_server + Application_Paths.remote_agent_package_url + ".sha512", server_config_new.guid);
+                string remote_agent_package_hash = await Helper.Http.GetHashAsync(server_config_new.ssl, trust_server + Application_Paths.remote_agent_package_url + ".sha512", server_config_new.package_guid);
                 Logging.Handler.Debug("Main", "Get hash remote agent package", remote_agent_package_hash);
                 Console.WriteLine("[" + DateTime.Now + "] - [Main] -> Get hash remote agent package: " + remote_agent_package_hash);
 
                 // Get hash health agent package
-                string health_agent_package_hash = await Helper.Http.GetHashAsync(server_config_new.ssl, trust_server + Application_Paths.health_agent_package_url + ".sha512", server_config_new.guid);
+                string health_agent_package_hash = await Helper.Http.GetHashAsync(server_config_new.ssl, trust_server + Application_Paths.health_agent_package_url + ".sha512", server_config_new.package_guid);
                 Logging.Handler.Debug("Main", "Get hash health agent package", health_agent_package_hash);
                 Console.WriteLine("[" + DateTime.Now + "] - [Main] -> Get hash health agent package: " + health_agent_package_hash);
 
                 // Get hash uninstaller
-                string uninstaller_hash = await Helper.Http.GetHashAsync(server_config_new.ssl, trust_server + Application_Paths.uninstaller_package_url + ".sha512", server_config_new.guid);
+                string uninstaller_hash = await Helper.Http.GetHashAsync(server_config_new.ssl, trust_server + Application_Paths.uninstaller_package_url + ".sha512", server_config_new.package_guid);
                 Logging.Handler.Debug("Main", "Get hash uninstaller", uninstaller_hash);
                 Console.WriteLine("[" + DateTime.Now + "] - [Main] -> Get hash uninstaller: " + uninstaller_hash);
 
@@ -422,7 +422,7 @@ namespace NetLock_RMM_Agent_Installer_Windows
                     var jsonObject = new
                     {
                         ssl = server_config_new.ssl,
-                        guid = server_config_new.guid,
+                        package_guid = server_config_new.package_guid,
                         main_communication_server = server_config_old.main_communication_server,
                         fallback_communication_server = server_config_old.fallback_communication_server,
                         main_update_server = server_config_old.main_update_server,
