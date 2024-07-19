@@ -13,6 +13,41 @@ namespace NetLock_RMM_Agent_Installer_Windows.Helper
 {
     internal class Check_Connection
     {
+        public static async Task<string> Check_Servers(string mode, string servers)
+        {
+            try
+            {
+                // Check connection to servers. Split communication_servers with "," and check each server 
+                List<string> values = new List<string>(servers.Split(','));
+
+                string server = String.Empty;
+
+                foreach (var value in values)
+                {
+                    // Remove whitespace
+                    value.Trim();
+
+                    if (await Hostname_IP_Port(value, mode))
+                    {
+                        Logging.Handler.Debug("Initialization.Check_Connection.Check_Servers", "Server connection successful.", "");
+
+                        server = value;
+                    }
+                    else
+                    {
+                        Logging.Handler.Error("Initialization.Check_Connection.Check_Servers", "Server connection failed.", "");
+                    }
+                }
+
+                return server;
+            }
+            catch (Exception ex)
+            {
+                Logging.Handler.Error("Initialization.Check_Connection.Check_Servers", "Failed", ex.ToString());
+                return String.Empty;
+            }
+        }
+
         public static async Task<bool> Hostname_IP_Port(string server, string description)
         {
             Console.WriteLine("[" + DateTime.Now + "] - [Helper.Check_Connection.Hostname_IP_Port] -> Server: " + server + " Description: " + description);

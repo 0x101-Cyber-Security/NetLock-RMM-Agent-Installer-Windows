@@ -12,6 +12,7 @@ using System.Diagnostics;
 using System.Security.Cryptography;
 using System.Text.Json;
 using System.Security.Principal;
+using System.Runtime.CompilerServices;
 
 namespace NetLock_RMM_Agent_Installer_Windows
 {
@@ -19,22 +20,22 @@ namespace NetLock_RMM_Agent_Installer_Windows
     {
         public bool ssl { get; set; } = false;
         public string package_guid { get; set; } = String.Empty;
-        public string main_communication_server { get; set; } = String.Empty;
-        public string fallback_communication_server { get; set; } = String.Empty;
-        public string main_update_server { get; set; } = String.Empty;
-        public string fallback_update_server { get; set; } = String.Empty;
-        public string main_trust_server { get; set; } = String.Empty;
-        public string fallback_trust_server { get; set; } = String.Empty;
-        public string tenant_name { get; set; } = String.Empty;
-        public string location_name { get; set; } = String.Empty;
+        public string communication_servers { get; set; } = String.Empty;
+        public string remote_servers { get; set; } = String.Empty;
+        public string update_servers { get; set; } = String.Empty;
+        public string trust_servers { get; set; } = String.Empty;
+        public string tenant_guid { get; set; } = String.Empty;
+        public string location_guid { get; set; } = String.Empty;
         public string language { get; set; } = String.Empty;
         public string access_key { get; set; } = String.Empty;
-        public int authorized { get; set; } = 0;
+        public bool authorized { get; set; } = false;
     }
 
     internal class Program
     {
-        private static string communication_server = String.Empty;
+        private static string update_servers = String.Empty;
+        private static string trust_servers = String.Empty;
+
         private static string update_server = String.Empty;
         private static string trust_server = String.Empty;
 
@@ -106,65 +107,24 @@ namespace NetLock_RMM_Agent_Installer_Windows
 
                 Server_Config server_config_new = JsonSerializer.Deserialize<Server_Config>(server_config_json_new);
 
-                // Check connection to main communication server
-                if (await Helper.Check_Connection.Hostname_IP_Port(server_config_new.main_communication_server, "main_communication_server"))
+                // Check connection to update servers
+                update_server = await Helper.Check_Connection.Check_Servers("update", server_config_new.update_servers);
+
+                if (String.IsNullOrEmpty(update_server))
                 {
-                    communication_server = server_config_new.main_communication_server;
-                    Logging.Handler.Debug("Main", "Main communication server connection successful.", "");
-                    Console.WriteLine("[" + DateTime.Now + "] - [Main] -> Main communication server connection successful.");
-                }
-                else if (await Helper.Check_Connection.Hostname_IP_Port(server_config_new.fallback_communication_server, "fallback_communication_server")) // Check connection to fallback communication server
-                {
-                    communication_server = server_config_new.fallback_communication_server;
-                    Logging.Handler.Debug("Main", "Fallback communication server connection successful.", "");
-                    Console.WriteLine("[" + DateTime.Now + "] - [Main] -> Fallback communication server connection successful.");
-                }
-                else // If both connections fail, exit the program
-                {
-                    Logging.Handler.Error("Main", "Main & fallback communication server connection failed.", "");
-                    Console.WriteLine("[" + DateTime.Now + "] - [Main] -> Main & fallback communication server connection failed.");
+                    Logging.Handler.Error("Main", "Update server connection failed.", "");
+                    Console.WriteLine("[" + DateTime.Now + "] - [Main] -> Update server connection failed.");
                     Thread.Sleep(5000);
                     Environment.Exit(0);
                 }
 
-                // Check connection to main update server
-                if (await Helper.Check_Connection.Hostname_IP_Port(server_config_new.main_update_server, "main_update_server"))
-                {
-                    update_server = server_config_new.main_update_server;
-                    Logging.Handler.Debug("Main", "Main update server connection successful.", "");
-                    Console.WriteLine("[" + DateTime.Now + "] - [Main] -> Main update server connection successful.");
-                }
-                else if (await Helper.Check_Connection.Hostname_IP_Port(server_config_new.fallback_update_server, "fallback_update_server")) // Check connection to fallback update server
-                {
-                    update_server = server_config_new.fallback_update_server;
-                    Logging.Handler.Debug("Main", "Fallback update server connection successful.", "");
-                    Console.WriteLine("[" + DateTime.Now + "] - [Main] -> Fallback update server connection successful.");
-                }
-                else // If both connections fail, exit the program
-                {
-                    Logging.Handler.Error("Main", "Main & fallback update server connection failed.", "");
-                    Console.WriteLine("[" + DateTime.Now + "] - [Main] -> Main & fallback update server connection failed.");
-                    Thread.Sleep(5000);
-                    Environment.Exit(0);
-                }
+                // Check connection to trust servers
+                trust_server = await Helper.Check_Connection.Check_Servers("trust", server_config_new.trust_servers);
 
-                // Check connection to main trust server
-                if (await Helper.Check_Connection.Hostname_IP_Port(server_config_new.main_trust_server, "main_trust_server"))
+                if (String.IsNullOrEmpty(trust_server))
                 {
-                    trust_server = server_config_new.main_trust_server;
-                    Logging.Handler.Debug("Main", "Main trust server connection successful.", "");
-                    Console.WriteLine("[" + DateTime.Now + "] - [Main] -> Main trust server connection successful.");
-                }
-                else if (await Helper.Check_Connection.Hostname_IP_Port(server_config_new.fallback_trust_server, "fallback_trust_server")) // Check connection to fallback trust server
-                {
-                    trust_server = server_config_new.fallback_trust_server;
-                    Logging.Handler.Debug("Main", "Fallback trust server connection successful.", "");
-                    Console.WriteLine("[" + DateTime.Now + "] - [Main] -> Fallback trust server connection successful.");
-                }
-                else // If both connections fail, exit the program
-                {
-                    Logging.Handler.Error("Main", "Main & fallback trust server connection failed.", "");
-                    Console.WriteLine("[" + DateTime.Now + "] - [Main] -> Main & fallback trust server connection failed.");
+                    Logging.Handler.Error("Main", "Trust server connection failed.", "");
+                    Console.WriteLine("[" + DateTime.Now + "] - [Main] -> Trust server connection failed.");
                     Thread.Sleep(5000);
                     Environment.Exit(0);
                 }
@@ -423,14 +383,12 @@ namespace NetLock_RMM_Agent_Installer_Windows
                     {
                         ssl = server_config_new.ssl,
                         package_guid = server_config_new.package_guid,
-                        main_communication_server = server_config_old.main_communication_server,
-                        fallback_communication_server = server_config_old.fallback_communication_server,
-                        main_update_server = server_config_old.main_update_server,
-                        fallback_update_server = server_config_old.fallback_update_server,
-                        main_trust_server = server_config_old.main_trust_server,
-                        fallback_trust_server = server_config_old.fallback_trust_server,
-                        tenant_name = server_config_old.tenant_name,
-                        location_name = server_config_old.location_name,
+                        communication_servers = server_config_old.communication_servers,
+                        remote_servers = server_config_old.remote_servers,
+                        update_servers = server_config_old.update_servers,
+                        trust_servers = server_config_old.trust_servers,
+                        tenant_guid = server_config_old.tenant_guid,
+                        location_guid = server_config_old.location_guid,
                         language = server_config_old.language,
                         access_key = server_config_old.access_key,
                         authorized = server_config_old.authorized,
