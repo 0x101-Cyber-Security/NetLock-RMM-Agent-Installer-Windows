@@ -7,7 +7,7 @@
     <ProjectGuid>{4F9D9FE1-857A-4B42-A79D-CB78C1F0F815}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>NetLock_RMM_Agent_Installer_Windows</RootNamespace>
-    <AssemblyName>NetLock RMM Agent Installer Windows</AssemblyName>
+    <AssemblyName>NetLock RMM Agent Installer %28Windows%29</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

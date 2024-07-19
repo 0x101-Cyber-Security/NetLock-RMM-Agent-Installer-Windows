@@ -1,0 +1,32 @@
+C:\Users\NicoMak\OneDrive - 0x101 Cyber Security\NetLock Root\NetLock-RMM-Agent-Installer-Windows\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\NicoMak\OneDrive - 0x101 Cyber Security\NetLock Root\NetLock-RMM-Agent-Installer-Windows\bin\Debug\System.Buffers.dll
+C:\Users\NicoMak\OneDrive - 0x101 Cyber Security\NetLock Root\NetLock-RMM-Agent-Installer-Windows\bin\Debug\System.Diagnostics.EventLog.dll
+C:\Users\NicoMak\OneDrive - 0x101 Cyber Security\NetLock Root\NetLock-RMM-Agent-Installer-Windows\bin\Debug\System.Memory.dll
+C:\Users\NicoMak\OneDrive - 0x101 Cyber Security\NetLock Root\NetLock-RMM-Agent-Installer-Windows\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\NicoMak\OneDrive - 0x101 Cyber Security\NetLock Root\NetLock-RMM-Agent-Installer-Windows\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\NicoMak\OneDrive - 0x101 Cyber Security\NetLock Root\NetLock-RMM-Agent-Installer-Windows\bin\Debug\System.Security.Principal.Windows.dll
+C:\Users\NicoMak\OneDrive - 0x101 Cyber Security\NetLock Root\NetLock-RMM-Agent-Installer-Windows\bin\Debug\System.ServiceProcess.ServiceController.dll
+C:\Users\NicoMak\OneDrive - 0x101 Cyber Security\NetLock Root\NetLock-RMM-Agent-Installer-Windows\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\NicoMak\OneDrive - 0x101 Cyber Security\NetLock Root\NetLock-RMM-Agent-Installer-Windows\bin\Debug\System.Text.Json.dll
+C:\Users\NicoMak\OneDrive - 0x101 Cyber Security\NetLock Root\NetLock-RMM-Agent-Installer-Windows\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\NicoMak\OneDrive - 0x101 Cyber Security\NetLock Root\NetLock-RMM-Agent-Installer-Windows\bin\Debug\System.ValueTuple.dll
+C:\Users\NicoMak\OneDrive - 0x101 Cyber Security\NetLock Root\NetLock-RMM-Agent-Installer-Windows\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\NicoMak\OneDrive - 0x101 Cyber Security\NetLock Root\NetLock-RMM-Agent-Installer-Windows\bin\Debug\System.Buffers.xml
+C:\Users\NicoMak\OneDrive - 0x101 Cyber Security\NetLock Root\NetLock-RMM-Agent-Installer-Windows\bin\Debug\System.Diagnostics.EventLog.xml
+C:\Users\NicoMak\OneDrive - 0x101 Cyber Security\NetLock Root\NetLock-RMM-Agent-Installer-Windows\bin\Debug\System.Memory.xml
+C:\Users\NicoMak\OneDrive - 0x101 Cyber Security\NetLock Root\NetLock-RMM-Agent-Installer-Windows\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\NicoMak\OneDrive - 0x101 Cyber Security\NetLock Root\NetLock-RMM-Agent-Installer-Windows\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\NicoMak\OneDrive - 0x101 Cyber Security\NetLock Root\NetLock-RMM-Agent-Installer-Windows\bin\Debug\System.Security.Principal.Windows.xml
+C:\Users\NicoMak\OneDrive - 0x101 Cyber Security\NetLock Root\NetLock-RMM-Agent-Installer-Windows\bin\Debug\System.ServiceProcess.ServiceController.xml
+C:\Users\NicoMak\OneDrive - 0x101 Cyber Security\NetLock Root\NetLock-RMM-Agent-Installer-Windows\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\NicoMak\OneDrive - 0x101 Cyber Security\NetLock Root\NetLock-RMM-Agent-Installer-Windows\bin\Debug\System.Text.Json.xml
+C:\Users\NicoMak\OneDrive - 0x101 Cyber Security\NetLock Root\NetLock-RMM-Agent-Installer-Windows\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\NicoMak\OneDrive - 0x101 Cyber Security\NetLock Root\NetLock-RMM-Agent-Installer-Windows\bin\Debug\System.ValueTuple.xml
+C:\Users\NicoMak\OneDrive - 0x101 Cyber Security\NetLock Root\NetLock-RMM-Agent-Installer-Windows\obj\Debug\NetLock RMM Agent Installer (Windows).csproj.AssemblyReference.cache
+C:\Users\NicoMak\OneDrive - 0x101 Cyber Security\NetLock Root\NetLock-RMM-Agent-Installer-Windows\obj\Debug\NetLock RMM Agent Installer (Windows).csproj.CoreCompileInputs.cache
+C:\Users\NicoMak\OneDrive - 0x101 Cyber Security\NetLock Root\NetLock-RMM-Agent-Installer-Windows\obj\Debug\NetLock .2A52ECB2.Up2Date
+C:\Users\NicoMak\OneDrive - 0x101 Cyber Security\NetLock Root\NetLock-RMM-Agent-Installer-Windows\bin\Debug\NetLock RMM Agent Installer (Windows).exe.config
+C:\Users\NicoMak\OneDrive - 0x101 Cyber Security\NetLock Root\NetLock-RMM-Agent-Installer-Windows\bin\Debug\NetLock RMM Agent Installer (Windows).exe
+C:\Users\NicoMak\OneDrive - 0x101 Cyber Security\NetLock Root\NetLock-RMM-Agent-Installer-Windows\bin\Debug\NetLock RMM Agent Installer (Windows).pdb
+C:\Users\NicoMak\OneDrive - 0x101 Cyber Security\NetLock Root\NetLock-RMM-Agent-Installer-Windows\obj\Debug\NetLock RMM Agent Installer (Windows).exe
+C:\Users\NicoMak\OneDrive - 0x101 Cyber Security\NetLock Root\NetLock-RMM-Agent-Installer-Windows\obj\Debug\NetLock RMM Agent Installer (Windows).pdb

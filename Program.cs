@@ -400,6 +400,7 @@ namespace NetLock_RMM_Agent_Installer_Windows
 
                     // Write the JSON string to a file
                     File.WriteAllText(Application_Paths.program_data_comm_agent_server_config, json);
+                    File.WriteAllText(Application_Paths.program_data_health_agent_server_config, json);
                 }
 
                 // Delete old uninstaller
@@ -445,12 +446,17 @@ namespace NetLock_RMM_Agent_Installer_Windows
                 if (!Directory.Exists(Application_Paths.program_data_comm_agent_dir))
                     Directory.CreateDirectory(Application_Paths.program_data_comm_agent_dir);
 
+                // Create health agent program data dir
+                if (!Directory.Exists(Application_Paths.program_data_health_agent_dir))
+                    Directory.CreateDirectory(Application_Paths.program_data_health_agent_dir);
+
                 // Copy server config json to program data dir
                 if (arg1 == "clean")
                 {
                     Logging.Handler.Debug("Main", "Copy server_config.json", "Clean mode.");
                     Console.WriteLine("[" + DateTime.Now + "] - [Main] -> Copy server_config.json: Clean mode.");
                     File.Copy(arg2, Application_Paths.program_data_comm_agent_server_config, true);
+                    File.Copy(arg2, Application_Paths.program_data_health_agent_server_config, true);
                 }
 
                 // Create just installed file
@@ -473,11 +479,14 @@ namespace NetLock_RMM_Agent_Installer_Windows
                 Console.WriteLine("[" + DateTime.Now + "] - [Main] -> Register remote agent as service: Done.");
 
                 // Register health agent as service
-                Console.WriteLine("[" + DateTime.Now + "] - [Main] -> Registering health agent as service.");
-                Logging.Handler.Debug("Main", "Registering health agent as service", "");
-                //Process.Start("sc", "create NetLock_RMM_Health_Agent_Windows binPath= \"" + Application_Paths.program_files_health_agent_path + "\" start= auto").WaitForExit();
-                Logging.Handler.Debug("Main", "Register health agent as service", "Done.");
-                Console.WriteLine("[" + DateTime.Now + "] - [Main] -> Register health agent as service: Done.");
+                if (arg1 == "clean")
+                {
+                    Console.WriteLine("[" + DateTime.Now + "] - [Main] -> Registering health agent as service.");
+                    Logging.Handler.Debug("Main", "Registering health agent as service", "");
+                    Process.Start("sc", "create NetLock_RMM_Health_Agent_Windows binPath= \"" + Application_Paths.program_files_health_agent_path + "\" start= auto").WaitForExit();
+                    Logging.Handler.Debug("Main", "Register health agent as service", "Done.");
+                    Console.WriteLine("[" + DateTime.Now + "] - [Main] -> Register health agent as service: Done.");
+                }
 
                 // Start comm agent service
                 Logging.Handler.Debug("Main", "Starting comm agent service", "");
@@ -494,11 +503,14 @@ namespace NetLock_RMM_Agent_Installer_Windows
                 Console.WriteLine("[" + DateTime.Now + "] - [Main] -> Start remote agent service: Done.");
 
                 // Start health agent service
-                Logging.Handler.Debug("Main", "Starting health agent service", "");
-                Console.WriteLine("[" + DateTime.Now + "] - [Main] -> Starting health agent service.");
-                //Helper.Service.Start("NetLock_RMM_Health_Agent_Windows");
-                Logging.Handler.Debug("Main", "Start health agent service", "Done.");
-                Console.WriteLine("[" + DateTime.Now + "] - [Main] -> Start health agent service: Done.");
+                if (arg1 == "clean")
+                {
+                    Logging.Handler.Debug("Main", "Starting health agent service", "");
+                    Console.WriteLine("[" + DateTime.Now + "] - [Main] -> Starting health agent service.");
+                    Helper.Service.Start("NetLock_RMM_Health_Agent_Windows");
+                    Logging.Handler.Debug("Main", "Start health agent service", "Done.");
+                    Console.WriteLine("[" + DateTime.Now + "] - [Main] -> Start health agent service: Done.");
+                }
 
                 // Delete temp dir
                 Logging.Handler.Debug("Main", "Delete temp dir", "");

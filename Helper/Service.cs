@@ -13,22 +13,22 @@ namespace NetLock_RMM_Agent_Installer_Windows.Helper
         {
             try
             {
-                Logging.Handler.Debug("Helper.Service.Start", "Stop service.", name);
-                Console.WriteLine("[" + DateTime.Now + "] - [Helper.Service.Start] -> Stopping service: " + name);
+                Logging.Handler.Debug("Helper.Service.Start", "Starting service.", name);
+                Console.WriteLine("[" + DateTime.Now + "] - [Helper.Service.Start] -> Starting service: " + name);
 
                 ServiceController sc = new ServiceController(name);
                 sc.Start();
                 sc.WaitForStatus(ServiceControllerStatus.Running);
 
-                Logging.Handler.Debug("Helper.Service.Start", "Stop service.", "Done.");
-                Console.WriteLine("[" + DateTime.Now + "] - [Helper.Service.Start] -> Stop service: Done.");
+                Logging.Handler.Debug("Helper.Service.Start", "Starting service.", "Done.");
+                Console.WriteLine("[" + DateTime.Now + "] - [Helper.Service.Start] -> Starting service: Done.");
 
                 return true;
             }
             catch (Exception ex)
             {
-                Logging.Handler.Error("Helper.Service.Start", "Stopping service failed: " + name, ex.ToString());
-                Console.WriteLine("[" + DateTime.Now + "] - [Helper.Service.Start] -> Stopping service failed: " + ex.Message);
+                Logging.Handler.Error("Helper.Service.Start", "Starting service failed: " + name, ex.ToString());
+                Console.WriteLine("[" + DateTime.Now + "] - [Helper.Service.Start] -> Starting service failed: " + ex.Message);
                 return false;
             }
         }
