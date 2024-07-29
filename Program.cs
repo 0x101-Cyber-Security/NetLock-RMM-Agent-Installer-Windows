@@ -427,20 +427,23 @@ namespace NetLock_RMM_Agent_Installer_Windows
                 Logging.Handler.Debug("Main", "Uninstaller closed", "");
                 Console.WriteLine("[" + DateTime.Now + "] - [Main] -> Uninstaller closed.");
 
-                // Extract comm agent package
                 Logging.Handler.Debug("Main", "Extracting comm agent package", "");
                 Console.WriteLine("[" + DateTime.Now + "] - [Main] -> Extracting comm agent package.");
                 ZipFile.ExtractToDirectory(Application_Paths.c_temp_netlock_dir + Application_Paths.comm_agent_package_path, Application_Paths.program_files_comm_agent_dir);
+
+                // Extract comm agent package
+                if (arg1 == "clean")
+                {
+                    // Extract health agent package
+                    Logging.Handler.Debug("Main", "Extracting health agent package", "");
+                    Console.WriteLine("[" + DateTime.Now + "] - [Main] -> Extracting health agent package.");
+                    ZipFile.ExtractToDirectory(Application_Paths.c_temp_netlock_dir + Application_Paths.health_agent_package_path, Application_Paths.program_files_health_agent_dir);
+                }
 
                 // Extract remote agent package
                 Logging.Handler.Debug("Main", "Extracting remote agent package", "");
                 Console.WriteLine("[" + DateTime.Now + "] - [Main] -> Extracting remote agent package.");
                 ZipFile.ExtractToDirectory(Application_Paths.c_temp_netlock_dir + Application_Paths.remote_agent_package_path, Application_Paths.program_files_remote_agent_dir);
-
-                // Extract health agent package
-                Logging.Handler.Debug("Main", "Extracting health agent package", "");
-                Console.WriteLine("[" + DateTime.Now + "] - [Main] -> Extracting health agent package.");
-                ZipFile.ExtractToDirectory(Application_Paths.c_temp_netlock_dir + Application_Paths.health_agent_package_path, Application_Paths.program_files_health_agent_dir);
 
                 // Create comm agent program data dir
                 if (!Directory.Exists(Application_Paths.program_data_comm_agent_dir))
