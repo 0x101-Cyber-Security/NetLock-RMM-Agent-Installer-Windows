@@ -1,0 +1,32 @@
+C:\Users\NicoMak\NetLock Root\NetLock-RMM-Agent-Installer-Windows\bin\Release\NetLock RMM Agent Installer (Windows).exe.config
+C:\Users\NicoMak\NetLock Root\NetLock-RMM-Agent-Installer-Windows\bin\Release\NetLock RMM Agent Installer (Windows).exe
+C:\Users\NicoMak\NetLock Root\NetLock-RMM-Agent-Installer-Windows\bin\Release\NetLock RMM Agent Installer (Windows).pdb
+C:\Users\NicoMak\NetLock Root\NetLock-RMM-Agent-Installer-Windows\bin\Release\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\NicoMak\NetLock Root\NetLock-RMM-Agent-Installer-Windows\bin\Release\System.Buffers.dll
+C:\Users\NicoMak\NetLock Root\NetLock-RMM-Agent-Installer-Windows\bin\Release\System.Diagnostics.EventLog.dll
+C:\Users\NicoMak\NetLock Root\NetLock-RMM-Agent-Installer-Windows\bin\Release\System.Memory.dll
+C:\Users\NicoMak\NetLock Root\NetLock-RMM-Agent-Installer-Windows\bin\Release\System.Numerics.Vectors.dll
+C:\Users\NicoMak\NetLock Root\NetLock-RMM-Agent-Installer-Windows\bin\Release\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\NicoMak\NetLock Root\NetLock-RMM-Agent-Installer-Windows\bin\Release\System.Security.Principal.Windows.dll
+C:\Users\NicoMak\NetLock Root\NetLock-RMM-Agent-Installer-Windows\bin\Release\System.ServiceProcess.ServiceController.dll
+C:\Users\NicoMak\NetLock Root\NetLock-RMM-Agent-Installer-Windows\bin\Release\System.Text.Encodings.Web.dll
+C:\Users\NicoMak\NetLock Root\NetLock-RMM-Agent-Installer-Windows\bin\Release\System.Text.Json.dll
+C:\Users\NicoMak\NetLock Root\NetLock-RMM-Agent-Installer-Windows\bin\Release\System.Threading.Tasks.Extensions.dll
+C:\Users\NicoMak\NetLock Root\NetLock-RMM-Agent-Installer-Windows\bin\Release\System.ValueTuple.dll
+C:\Users\NicoMak\NetLock Root\NetLock-RMM-Agent-Installer-Windows\bin\Release\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\NicoMak\NetLock Root\NetLock-RMM-Agent-Installer-Windows\bin\Release\System.Buffers.xml
+C:\Users\NicoMak\NetLock Root\NetLock-RMM-Agent-Installer-Windows\bin\Release\System.Diagnostics.EventLog.xml
+C:\Users\NicoMak\NetLock Root\NetLock-RMM-Agent-Installer-Windows\bin\Release\System.Memory.xml
+C:\Users\NicoMak\NetLock Root\NetLock-RMM-Agent-Installer-Windows\bin\Release\System.Numerics.Vectors.xml
+C:\Users\NicoMak\NetLock Root\NetLock-RMM-Agent-Installer-Windows\bin\Release\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\NicoMak\NetLock Root\NetLock-RMM-Agent-Installer-Windows\bin\Release\System.Security.Principal.Windows.xml
+C:\Users\NicoMak\NetLock Root\NetLock-RMM-Agent-Installer-Windows\bin\Release\System.ServiceProcess.ServiceController.xml
+C:\Users\NicoMak\NetLock Root\NetLock-RMM-Agent-Installer-Windows\bin\Release\System.Text.Encodings.Web.xml
+C:\Users\NicoMak\NetLock Root\NetLock-RMM-Agent-Installer-Windows\bin\Release\System.Text.Json.xml
+C:\Users\NicoMak\NetLock Root\NetLock-RMM-Agent-Installer-Windows\bin\Release\System.Threading.Tasks.Extensions.xml
+C:\Users\NicoMak\NetLock Root\NetLock-RMM-Agent-Installer-Windows\bin\Release\System.ValueTuple.xml
+C:\Users\NicoMak\NetLock Root\NetLock-RMM-Agent-Installer-Windows\obj\Release\NetLock RMM Agent Installer (Windows).csproj.AssemblyReference.cache
+C:\Users\NicoMak\NetLock Root\NetLock-RMM-Agent-Installer-Windows\obj\Release\NetLock RMM Agent Installer (Windows).csproj.CoreCompileInputs.cache
+C:\Users\NicoMak\NetLock Root\NetLock-RMM-Agent-Installer-Windows\obj\Release\NetLock .2A52ECB2.Up2Date
+C:\Users\NicoMak\NetLock Root\NetLock-RMM-Agent-Installer-Windows\obj\Release\NetLock RMM Agent Installer (Windows).exe
+C:\Users\NicoMak\NetLock Root\NetLock-RMM-Agent-Installer-Windows\obj\Release\NetLock RMM Agent Installer (Windows).pdb

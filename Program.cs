@@ -133,30 +133,6 @@ namespace NetLock_RMM_Agent_Installer_Windows
                 if (!Directory.Exists(Application_Paths.c_temp_netlock_dir))
                     Directory.CreateDirectory(Application_Paths.c_temp_netlock_dir);
 
-                // Create program files dir (comm agent)
-                if (!Directory.Exists(Application_Paths.program_files_comm_agent_dir))
-                    Directory.CreateDirectory(Application_Paths.program_files_comm_agent_path);
-
-                // Create program files dir (remote agent)
-                if (!Directory.Exists(Application_Paths.program_files_remote_agent_dir))
-                    Directory.CreateDirectory(Application_Paths.program_files_remote_agent_dir);
-
-                // Create program files dir (health agent)
-                if (!Directory.Exists(Application_Paths.program_files_health_agent_dir))
-                    Directory.CreateDirectory(Application_Paths.program_files_health_agent_dir);
-
-                // Create program data dir (comm agent)
-                if (!Directory.Exists(Application_Paths.program_data_health_agent_dir))
-                    Directory.CreateDirectory(Application_Paths.program_data_health_agent_dir);
-
-                // Create program data dir (remote agent)
-                if (!Directory.Exists(Application_Paths.program_data_remote_agent_dir))
-                    Directory.CreateDirectory(Application_Paths.program_data_remote_agent_dir);
-
-                // Create program data dir (health agent)
-                if (!Directory.Exists(Application_Paths.program_data_health_agent_dir))
-                    Directory.CreateDirectory(Application_Paths.program_data_health_agent_dir);
-
                 // Delete local packages
                 // Comm agent
                 if (File.Exists(Application_Paths.comm_agent_package_path))
@@ -372,9 +348,68 @@ namespace NetLock_RMM_Agent_Installer_Windows
                         Console.WriteLine("[" + DateTime.Now + "] - [Main] -> Backup old server_config.json: Not present.");
                     }
 
+                    // continues after uninstaller
+                }
+
+                // Delete old uninstaller
+                Helper.IO.Delete_Directory(Application_Paths.c_temp_uninstaller_dir);
+                Logging.Handler.Debug("Main", "Delete old uninstaller", "Done.");
+                Console.WriteLine("[" + DateTime.Now + "] - [Main] -> Delete old uninstaller: Done.");
+
+                // Extract uninstaller.package
+                Console.WriteLine("[" + DateTime.Now + "] - [Main] -> Extracting uninstaller.");
+                ZipFile.ExtractToDirectory(Application_Paths.c_temp_netlock_dir + Application_Paths.uninstaller_package_path, Application_Paths.c_temp_uninstaller_dir);
+                Console.WriteLine("[" + DateTime.Now + "] - [Main] -> Extract uninstaller: Done.");
+
+                // Execute uninstaller and wait for it to finish
+                Logging.Handler.Debug("Main", "Starting uninstaller", "");
+                Console.WriteLine("[" + DateTime.Now + "] - [Main] -> Starting uninstaller.");
+
+                Process uninstaller = new Process();
+                uninstaller.StartInfo.FileName = Application_Paths.c_temp_uninstaller_path;
+                uninstaller.StartInfo.Arguments = arg1;
+                uninstaller.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
+                uninstaller.Start();
+                uninstaller.WaitForExit();
+
+                Logging.Handler.Debug("Main", "Uninstaller closed", "");
+                Console.WriteLine("[" + DateTime.Now + "] - [Main] -> Uninstaller closed.");
+
+                // Create program files dir (comm agent)
+                if (!Directory.Exists(Application_Paths.program_files_comm_agent_dir))
+                    Directory.CreateDirectory(Application_Paths.program_files_comm_agent_dir);
+
+                // Create program files dir (remote agent)
+                if (!Directory.Exists(Application_Paths.program_files_remote_agent_dir))
+                    Directory.CreateDirectory(Application_Paths.program_files_remote_agent_dir);
+
+                // Create program files dir (health agent)
+                if (!Directory.Exists(Application_Paths.program_files_health_agent_dir))
+                    Directory.CreateDirectory(Application_Paths.program_files_health_agent_dir);
+
+                // Create program data dir (comm agent)
+                if (!Directory.Exists(Application_Paths.program_data_comm_agent_dir))
+                    Directory.CreateDirectory(Application_Paths.program_data_comm_agent_dir);
+
+                // Create program data dir (remote agent)
+                if (!Directory.Exists(Application_Paths.program_data_remote_agent_dir))
+                    Directory.CreateDirectory(Application_Paths.program_data_remote_agent_dir);
+
+                // Create program data dir (health agent)
+                if (!Directory.Exists(Application_Paths.program_data_health_agent_dir))
+                    Directory.CreateDirectory(Application_Paths.program_data_health_agent_dir);
+
+                // Extract comm agent package
+                Logging.Handler.Debug("Main", "Extracting comm agent package", "");
+                Console.WriteLine("[" + DateTime.Now + "] - [Main] -> Extracting comm agent package.");
+                ZipFile.ExtractToDirectory(Application_Paths.c_temp_netlock_dir + Application_Paths.comm_agent_package_path, Application_Paths.program_files_comm_agent_dir);
+
+                // Fix server_config.json
+                if (arg1 == "fix")
+                {
                     // Fix server_config.json
                     // Read old server_config.json
-                    string server_config_json_old = File.ReadAllText(Application_Paths.program_data_comm_agent_server_config);
+                    string server_config_json_old = File.ReadAllText(Application_Paths.c_temp_server_config_backup_path);
                     Logging.Handler.Debug("Main", "Server_Config_Handler.Load (server_config_json_old)", server_config_json_old);
                     Server_Config server_config_old = JsonSerializer.Deserialize<Server_Config>(server_config_json_old);
 
@@ -403,35 +438,7 @@ namespace NetLock_RMM_Agent_Installer_Windows
                     File.WriteAllText(Application_Paths.program_data_health_agent_server_config, json);
                 }
 
-                // Delete old uninstaller
-                Helper.IO.Delete_Directory(Application_Paths.c_temp_uninstaller_dir);
-                Logging.Handler.Debug("Main", "Delete old uninstaller", "Done.");
-                Console.WriteLine("[" + DateTime.Now + "] - [Main] -> Delete old uninstaller: Done.");
-
-                // Extract uninstaller.package
-                Console.WriteLine("[" + DateTime.Now + "] - [Main] -> Extracting uninstaller.");
-                ZipFile.ExtractToDirectory(Application_Paths.c_temp_netlock_dir + Application_Paths.uninstaller_package_path, Application_Paths.c_temp_uninstaller_dir);
-                Console.WriteLine("[" + DateTime.Now + "] - [Main] -> Extract uninstaller: Done.");
-
-                // Execute uninstaller and wait for it to finish
-                Logging.Handler.Debug("Main", "Starting uninstaller", "");
-                Console.WriteLine("[" + DateTime.Now + "] - [Main] -> Starting uninstaller.");
-
-                Process uninstaller = new Process();
-                uninstaller.StartInfo.FileName = Application_Paths.c_temp_uninstaller_path;
-                uninstaller.StartInfo.Arguments = arg1;
-                uninstaller.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
-                uninstaller.Start();
-                uninstaller.WaitForExit();
-
-                Logging.Handler.Debug("Main", "Uninstaller closed", "");
-                Console.WriteLine("[" + DateTime.Now + "] - [Main] -> Uninstaller closed.");
-
-                Logging.Handler.Debug("Main", "Extracting comm agent package", "");
-                Console.WriteLine("[" + DateTime.Now + "] - [Main] -> Extracting comm agent package.");
-                ZipFile.ExtractToDirectory(Application_Paths.c_temp_netlock_dir + Application_Paths.comm_agent_package_path, Application_Paths.program_files_comm_agent_dir);
-
-                // Extract comm agent package
+                // Extract health agent package
                 if (arg1 == "clean")
                 {
                     // Extract health agent package
@@ -444,14 +451,6 @@ namespace NetLock_RMM_Agent_Installer_Windows
                 Logging.Handler.Debug("Main", "Extracting remote agent package", "");
                 Console.WriteLine("[" + DateTime.Now + "] - [Main] -> Extracting remote agent package.");
                 ZipFile.ExtractToDirectory(Application_Paths.c_temp_netlock_dir + Application_Paths.remote_agent_package_path, Application_Paths.program_files_remote_agent_dir);
-
-                // Create comm agent program data dir
-                if (!Directory.Exists(Application_Paths.program_data_comm_agent_dir))
-                    Directory.CreateDirectory(Application_Paths.program_data_comm_agent_dir);
-
-                // Create health agent program data dir
-                if (!Directory.Exists(Application_Paths.program_data_health_agent_dir))
-                    Directory.CreateDirectory(Application_Paths.program_data_health_agent_dir);
 
                 // Copy server config json to program data dir
                 if (arg1 == "clean")
@@ -516,12 +515,12 @@ namespace NetLock_RMM_Agent_Installer_Windows
                 }
 
                 // Delete temp dir
-                Logging.Handler.Debug("Main", "Delete temp dir", "");
+                /*Logging.Handler.Debug("Main", "Delete temp dir", "");
                 Console.WriteLine("[" + DateTime.Now + "] - [Main] -> Delete temp dir.");
                 Helper.IO.Delete_Directory(Application_Paths.c_temp_netlock_dir);
                 Logging.Handler.Debug("Main", "Delete temp dir", "Done.");
                 Console.WriteLine("[" + DateTime.Now + "] - [Main] -> Delete temp dir: Done.");
-
+                */
                 Console.WriteLine("[" + DateTime.Now + "] - [Main] -> Installation finished.");
 
                 // Wait for 5 seconds

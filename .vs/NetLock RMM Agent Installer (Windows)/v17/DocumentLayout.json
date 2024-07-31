@@ -7,7 +7,11 @@
       "RelativeMoniker": "D:0:0:{4F9D9FE1-857A-4B42-A79D-CB78C1F0F815}|NetLock RMM Agent Installer (Windows).csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4F9D9FE1-857A-4B42-A79D-CB78C1F0F815}|NetLock RMM Agent Installer (Windows).csproj|c:\\users\\nicomak\\netlock root\\netlock-rmm-agent-installer-windows\\packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "AbsoluteMoniker": "D:0:0:{4F9D9FE1-857A-4B42-A79D-CB78C1F0F815}|NetLock RMM Agent Installer (Windows).csproj|C:\\Users\\NicoMak\\NetLock Root\\NetLock-RMM-Agent-Installer-Windows\\application_paths.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F9D9FE1-857A-4B42-A79D-CB78C1F0F815}|NetLock RMM Agent Installer (Windows).csproj|solutionrelative:application_paths.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F9D9FE1-857A-4B42-A79D-CB78C1F0F815}|NetLock RMM Agent Installer (Windows).csproj|C:\\Users\\NicoMak\\NetLock Root\\NetLock-RMM-Agent-Installer-Windows\\packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{4F9D9FE1-857A-4B42-A79D-CB78C1F0F815}|NetLock RMM Agent Installer (Windows).csproj|solutionrelative:packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
@@ -15,16 +19,12 @@
       "RelativeMoniker": "D:0:0:{4F9D9FE1-857A-4B42-A79D-CB78C1F0F815}|NetLock RMM Agent Installer Windows.csproj|solutionrelative:packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4F9D9FE1-857A-4B42-A79D-CB78C1F0F815}|NetLock RMM Agent Installer (Windows).csproj|c:\\users\\nicomak\\netlock root\\netlock-rmm-agent-installer-windows\\helper\\io.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4F9D9FE1-857A-4B42-A79D-CB78C1F0F815}|NetLock RMM Agent Installer (Windows).csproj|C:\\Users\\NicoMak\\NetLock Root\\NetLock-RMM-Agent-Installer-Windows\\helper\\io.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4F9D9FE1-857A-4B42-A79D-CB78C1F0F815}|NetLock RMM Agent Installer (Windows).csproj|solutionrelative:helper\\io.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4F9D9FE1-857A-4B42-A79D-CB78C1F0F815}|NetLock RMM Agent Installer Windows.csproj|C:\\Users\\NicoMak\\NetLock Root\\NetLock-RMM-Agent-Installer-Windows\\helper\\io.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4F9D9FE1-857A-4B42-A79D-CB78C1F0F815}|NetLock RMM Agent Installer Windows.csproj|solutionrelative:helper\\io.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4F9D9FE1-857A-4B42-A79D-CB78C1F0F815}|NetLock RMM Agent Installer (Windows).csproj|c:\\users\\nicomak\\netlock root\\netlock-rmm-agent-installer-windows\\application_paths.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4F9D9FE1-857A-4B42-A79D-CB78C1F0F815}|NetLock RMM Agent Installer (Windows).csproj|solutionrelative:application_paths.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4F9D9FE1-857A-4B42-A79D-CB78C1F0F815}|NetLock RMM Agent Installer Windows.csproj|C:\\Users\\NicoMak\\NetLock Root\\NetLock-RMM-Agent-Installer-Windows\\application_paths.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -70,7 +70,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "IO.cs",
               "DocumentMoniker": "C:\\Users\\NicoMak\\NetLock Root\\NetLock-RMM-Agent-Installer-Windows\\Helper\\IO.cs",
               "RelativeDocumentMoniker": "Helper\\IO.cs",
@@ -78,12 +78,11 @@
               "RelativeToolTip": "Helper\\IO.cs",
               "ViewState": "AQIAACIAAAAAAAAAAAAQwD4AAABXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-29T12:36:05.525Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-29T12:36:05.525Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "packages.config",
               "DocumentMoniker": "C:\\Users\\NicoMak\\NetLock Root\\NetLock-RMM-Agent-Installer-Windows\\packages.config",
               "RelativeDocumentMoniker": "packages.config",
@@ -91,18 +90,17 @@
               "RelativeToolTip": "packages.config",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2024-07-29T12:36:05.568Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-29T12:36:05.568Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "Application_Paths.cs",
               "DocumentMoniker": "C:\\Users\\NicoMak\\NetLock Root\\NetLock-RMM-Agent-Installer-Windows\\Application_Paths.cs",
               "RelativeDocumentMoniker": "Application_Paths.cs",
               "ToolTip": "C:\\Users\\NicoMak\\NetLock Root\\NetLock-RMM-Agent-Installer-Windows\\Application_Paths.cs",
               "RelativeToolTip": "Application_Paths.cs",
-              "ViewState": "AQIAAAQAAAAAAAAAAAAEwB0AAABoAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-29T12:27:17.486Z",
               "EditorCaption": ""
@@ -139,14 +137,14 @@
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\NicoMak\\NetLock Root\\NetLock-RMM-Agent-Installer-Windows\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAJQBAAAAAAAAAAAiwKwBAAAAAAAA",
+              "ViewState": "AQIAAOUBAAAAAAAAAAAAAP8BAABNAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-08T12:54:52.814Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "packages.config",
               "DocumentMoniker": "C:\\Users\\NicoMak\\NetLock Root\\NetLock-RMM-Agent-Installer-Windows\\packages.config",
               "RelativeDocumentMoniker": "packages.config",
@@ -170,7 +168,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "IO.cs",
               "DocumentMoniker": "C:\\Users\\NicoMak\\NetLock Root\\NetLock-RMM-Agent-Installer-Windows\\Helper\\IO.cs",
               "RelativeDocumentMoniker": "Helper\\IO.cs",
@@ -214,8 +212,7 @@
               "RelativeToolTip": "Helper\\Service.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAqwAoAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-19T19:54:30.635Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-19T19:54:30.635Z"
             },
             {
               "$type": "Document",
