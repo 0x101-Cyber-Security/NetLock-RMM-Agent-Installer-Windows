@@ -30,6 +30,11 @@ namespace NetLock_RMM_Agent_Installer_Windows
         public static string program_data_health_agent_dir = @"C:\ProgramData\0x101 Cyber Security\NetLock RMM\Health Agent";
         public static string program_files_health_agent_path = @"C:\Program Files\0x101 Cyber Security\NetLock RMM\Health Agent\NetLock RMM Health Agent (Windows).exe";
 
+        public static string user_process_package_url = "/private/downloads/netlock/user_process.package";
+        public static string program_files_user_process_dir = @"C:\Program Files\0x101 Cyber Security\NetLock RMM\User Process";
+        public static string program_data_user_process_dir = @"C:\ProgramData\0x101 Cyber Security\NetLock RMM\User Process";
+        public static string program_files_user_process_path = @"C:\Program Files\0x101 Cyber Security\NetLock RMM\User Process\NetLock RMM User Process.exe";
+
         public static string uninstaller_package_url = "/private/downloads/netlock/uninstaller.package";
         public static string program_data_uninstaller_dir = @"C:\ProgramData\0x101 Cyber Security\NetLock RMM\Uninstaller";
         public static string c_temp_uninstaller_dir = @"C:\temp\netlock rmm\uninstaller";
@@ -38,6 +43,7 @@ namespace NetLock_RMM_Agent_Installer_Windows
         public static string comm_agent_package_path = @"\comm.package";
         public static string remote_agent_package_path = @"\remote.package";
         public static string health_agent_package_path = @"\health.package";
+        public static string user_process_package_path = @"\user_process.package";
         public static string uninstaller_package_path = @"\uninstaller.package";
 
         public static string c_temp_server_config_backup_path = @"C:\temp\netlock rmm\installer\server_config.json";

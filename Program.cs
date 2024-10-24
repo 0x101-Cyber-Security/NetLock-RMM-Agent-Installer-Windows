@@ -194,6 +194,12 @@ namespace NetLock_RMM_Agent_Installer_Windows
                 Logging.Handler.Debug("Main", "Download health agent package", "Done.");
                 Console.WriteLine("[" + DateTime.Now + "] - [Main] -> Download health agent package: Done.");
 
+                // Download User Process
+                http_status = await Helper.Http.DownloadFileAsync(server_config_new.ssl, update_server + Application_Paths.user_process_package_url, Application_Paths.c_temp_netlock_dir + Application_Paths.user_process_package_path, server_config_new.package_guid);
+                Logging.Handler.Debug("Main", "Download user process package", http_status.ToString());
+                Logging.Handler.Debug("Main", "Download user process package", "Done.");
+                Console.WriteLine("[" + DateTime.Now + "] - [Main] -> Download user process package: Done.");
+
                 // Download uninstaller
                 http_status = await Helper.Http.DownloadFileAsync(server_config_new.ssl, update_server + Application_Paths.uninstaller_package_url, Application_Paths.c_temp_netlock_dir + Application_Paths.uninstaller_package_path, server_config_new.package_guid);
                 Logging.Handler.Debug("Main", "Download uninstaller", http_status.ToString());
@@ -214,6 +220,11 @@ namespace NetLock_RMM_Agent_Installer_Windows
                 string health_agent_package_hash = await Helper.Http.GetHashAsync(server_config_new.ssl, trust_server + Application_Paths.health_agent_package_url + ".sha512", server_config_new.package_guid);
                 Logging.Handler.Debug("Main", "Get hash health agent package", health_agent_package_hash);
                 Console.WriteLine("[" + DateTime.Now + "] - [Main] -> Get hash health agent package: " + health_agent_package_hash);
+
+                // Get hash user process package
+                string user_process_package_hash = await Helper.Http.GetHashAsync(server_config_new.ssl, trust_server + Application_Paths.user_process_package_url + ".sha512", server_config_new.package_guid);
+                Logging.Handler.Debug("Main", "Get hash user process package", user_process_package_hash);
+                Console.WriteLine("[" + DateTime.Now + "] - [Main] -> Get hash user process package: " + user_process_package_hash);
 
                 // Get hash uninstaller
                 string uninstaller_hash = await Helper.Http.GetHashAsync(server_config_new.ssl, trust_server + Application_Paths.uninstaller_package_url + ".sha512", server_config_new.package_guid);
@@ -287,6 +298,27 @@ namespace NetLock_RMM_Agent_Installer_Windows
                 {
                     Logging.Handler.Debug("Main", "Check hash health agent package", "KO");
                     Console.WriteLine("[" + DateTime.Now + "] - [Main] -> Check hash health agent package: KO");
+                    Console.WriteLine("[" + DateTime.Now + "] - [Main] -> Aborting installation.");
+                    Thread.Sleep(5000);
+                    Environment.Exit(0);
+                }
+
+                // Check hash user process package
+                string user_process_package_path = Application_Paths.c_temp_netlock_dir + Application_Paths.user_process_package_path;
+                string user_process_package_hash_local = Helper.IO.Get_SHA512(user_process_package_path);
+
+                Logging.Handler.Debug("Main", "Check hash user process package", user_process_package_hash_local);
+                Console.WriteLine("[" + DateTime.Now + "] - [Main] -> Check hash user process package: " + user_process_package_hash_local);
+
+                if (user_process_package_hash_local == user_process_package_hash)
+                {
+                    Logging.Handler.Debug("Main", "Check hash user process package", "OK");
+                    Console.WriteLine("[" + DateTime.Now + "] - [Main] -> Check hash user process package: OK");
+                }
+                else
+                {
+                    Logging.Handler.Debug("Main", "Check hash user process package", "KO");
+                    Console.WriteLine("[" + DateTime.Now + "] - [Main] -> Check hash user process package: KO");
                     Console.WriteLine("[" + DateTime.Now + "] - [Main] -> Aborting installation.");
                     Thread.Sleep(5000);
                     Environment.Exit(0);
@@ -399,6 +431,10 @@ namespace NetLock_RMM_Agent_Installer_Windows
                 if (!Directory.Exists(Application_Paths.program_data_health_agent_dir))
                     Directory.CreateDirectory(Application_Paths.program_data_health_agent_dir);
 
+                // Create program data dir (user process)
+                if (!Directory.Exists(Application_Paths.program_data_user_process_dir))
+                    Directory.CreateDirectory(Application_Paths.program_data_user_process_dir);
+
                 // Extract comm agent package
                 Logging.Handler.Debug("Main", "Extracting comm agent package", "");
                 Console.WriteLine("[" + DateTime.Now + "] - [Main] -> Extracting comm agent package.");
@@ -451,6 +487,11 @@ namespace NetLock_RMM_Agent_Installer_Windows
                 Logging.Handler.Debug("Main", "Extracting remote agent package", "");
                 Console.WriteLine("[" + DateTime.Now + "] - [Main] -> Extracting remote agent package.");
                 ZipFile.ExtractToDirectory(Application_Paths.c_temp_netlock_dir + Application_Paths.remote_agent_package_path, Application_Paths.program_files_remote_agent_dir);
+
+                // Extract user process package
+                Logging.Handler.Debug("Main", "Extracting user process package", "");
+                Console.WriteLine("[" + DateTime.Now + "] - [Main] -> Extracting user process package.");
+                ZipFile.ExtractToDirectory(Application_Paths.c_temp_netlock_dir + Application_Paths.user_process_package_path, Application_Paths.program_files_user_process_dir);
 
                 // Copy server config json to program data dir
                 if (arg1 == "clean")
