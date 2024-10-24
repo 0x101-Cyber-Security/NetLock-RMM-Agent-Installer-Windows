@@ -24,6 +24,7 @@ namespace NetLock_RMM_Agent_Installer_Windows
         public string remote_servers { get; set; } = String.Empty;
         public string update_servers { get; set; } = String.Empty;
         public string trust_servers { get; set; } = String.Empty;
+        public string file_servers { get; set; } = String.Empty;
         public string tenant_guid { get; set; } = String.Empty;
         public string location_guid { get; set; } = String.Empty;
         public string language { get; set; } = String.Empty;
@@ -458,6 +459,7 @@ namespace NetLock_RMM_Agent_Installer_Windows
                         remote_servers = server_config_old.remote_servers,
                         update_servers = server_config_old.update_servers,
                         trust_servers = server_config_old.trust_servers,
+                        file_servers = server_config_old.file_servers,
                         tenant_guid = server_config_old.tenant_guid,
                         location_guid = server_config_old.location_guid,
                         language = server_config_old.language,
